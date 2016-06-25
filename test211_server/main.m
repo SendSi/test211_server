@@ -7,11 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "vhServiceListener.h"
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
         NSLog(@"Hello, World!");
+    vhServiceListener *listener=   [[vhServiceListener alloc] init];
+        [listener start];
+        [[NSRunLoop mainRunLoop] run];
     }
     return 0;
 }
